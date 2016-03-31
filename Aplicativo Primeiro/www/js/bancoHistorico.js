@@ -85,7 +85,7 @@ function salvarIndicado(indicado) {
     
     if((telefone !== '') && (nome !== '')){
         
-        db.transaction(function(tx) {
+        db.transactio(function(tx) {
             tx.executeSql("INSERT INTO indicado (ideleitor, celular, nome, email, status) VALUES (?,?,?,?,?)", [localStorage.getItem("idEleitor"), telefone, nome, email, "Não Enviado"], function(tx, res) {
             
                 $('#inputTelefoneIndicado').val('');

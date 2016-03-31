@@ -4,6 +4,7 @@
     "currentBuildConfiguration": "Android-Crosswalk",
     "projectFiles": {},
     "projectDirectories": {},
-    "currentService": {}
+    "currentService": {},
+    "initialAutoPluginCount": 0
   }
 }

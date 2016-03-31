@@ -311,13 +311,7 @@
     
     
         /* button  Registrar Ocorrência */
-    $(document).on("click", ".uib_w_74", function(evt)
-    {
-       
-        
-        
-        
-    });
+    
     
         /* button  Enviar */
     $(document).on("click", ".uib_w_69", function(evt)
@@ -356,6 +350,13 @@
     {
          /*global activate_page */
          activate_page("#mainpage"); 
+    });
+    
+        /* button  Registrar Ocorrência */
+    $(document).on("click", ".uib_w_74", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#RegistrarOcorrencia"); 
     });
     
     }
