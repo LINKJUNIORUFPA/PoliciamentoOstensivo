@@ -1,28 +1,24 @@
-function errorDBSalvarOcorrencia(tx, err) {
-    navigator.notification.alert('Problema ao salvar Ocorrência!', null, 'Erro!', 'OK');
+function errorDBSalvarIndicado(tx, err) {
+    navigator.notification.alert('Problema ao salvar indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
-
-/*function errorDBAtualizarIndicado(tx, err) {
+function errorDBAtualizarIndicado(tx, err) {
     navigator.notification.alert('Problema ao atualizar indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
-
 function errorDBExcluirIndicado(tx, err) {
     navigator.notification.alert('Problema ao excluir indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
-
 function errorDBListarIndicados(tx, err) {
     console.log("Error processing SQL: "+ JSON.stringify(err));
-}*/
-
-function errorDBEnviarOcorrencia(tx, err) {
-    navigator.notification.alert('Problema ao enviar Ocorrência!', null, 'Erro!', 'OK');
+}
+function errorDBEnviarIndicado(tx, err) {
+    navigator.notification.alert('Problema ao enviar indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
 
-/*
+
 
 function listIndicacoes() {
 
@@ -49,38 +45,22 @@ function listIndicacoes() {
     }); 
 }
 
-*/
 
-function setValueOcorrencia(id, tipo, momento, data, hota, desc, evidencia, localiz, anonimato, notif){
+
+function setValueIndicado(id, celular, nome, email, status){
     
-    localStorage.setItem("idOcorrencia", id);
-    localStorage.setItem("tipooc", tipo);
-    localStorage.setItem("momentooc", momento);
-    localStorage.setItem("dataoc", data);
-    localStorage.setItem("horaoc", hora);
-    localStorage.setItem("descoc", desc);
-    localStorage.setItem("evidenciaoc", evidencia);
-    localStorage.setItem("localizoc", localiz);
-    localStorage.setItem("anonimatooc", anonimato);
-    localStorage.setItem("notifoc", notif);
+    localStorage.setItem("idIndicado", id);
+    localStorage.setItem("celularIndicado", celular);
+    localStorage.setItem("nomeIndicado", nome);
+    localStorage.setItem("emailIndicado", email);
+    localStorage.setItem("statusIndicado", status);  
 }
 
 
-function getValueOcorrencia(){
-    
-    /*var tipo_oc = $('#tipooc').val();
-    var momento_oc = $('#momentooc').val();
-    var data_oc = $('#dataoc').val();
-    var hora_oc = $('#horaoc').val();
-            var desc_oc = $('#descoc').val();
-    var evidencia_oc = $('#evidenciaoc').val();
-    var localiz_oc = $('#localizoc').val();
-    var anonimato_oc = $('#anonimatooc').val();
-    var notif_oc = $('#notifoc').val();*/
-    
-    
-    $('#inputtipo_oc').val(localStorage.getItem("tipooc"));
-    $('#inputdesc_oc').val(localStorage.getItem("descoc"));   
+function getValueIndicado(){
+        
+    $('#inputTelefoneIndicadoB').val(localStorage.getItem("celularIndicado"));
+    $('#inputNomeIndicadoB').val(localStorage.getItem("nomeIndicado"));   
     $('#inputEmailIndicadoB').val(localStorage.getItem("emailIndicado"));
 
     if(localStorage.getItem("statusIndicado") === 'Enviado'){
@@ -97,7 +77,7 @@ function getValueOcorrencia(){
 
 
 
-function salvarOcorrencia(ocorrencia) {
+function salvarIndicado(indicado) {
     
     var telefone = $('#inputTelefoneIndicado').val();
     var nome = $('#inputNomeIndicado').val();
@@ -111,7 +91,9 @@ function salvarOcorrencia(ocorrencia) {
                 $('#inputTelefoneIndicado').val('');
                 $('#inputNomeIndicado').val('');
                 $('#inputEmailIndicado').val('');
-             
+              //  setTimeout(function() {
+               //     listIndicacoes();
+               // }, 200);
             });
         }, errorDBSalvarIndicado);   
     }
@@ -121,7 +103,7 @@ function salvarOcorrencia(ocorrencia) {
 }
 
 
-/*function excluirIndicado() {
+function excluirIndicado() {
     db.transaction(function(tx) {
         tx.executeSql("DELETE FROM indicado WHERE id=?;", [localStorage.getItem("idIndicado")], function(tx, res) {
              setTimeout(function() {
@@ -165,7 +147,7 @@ function enviarIndicado() {
         template: '<ion-spinner></ion-spinner> Enviando...'
     });
     */
-/*    var telefone = $('#inputTelefoneIndicadoB').val();
+    var telefone = $('#inputTelefoneIndicadoB').val();
     var nome = $('#inputNomeIndicadoB').val();
     var email = $('#inputEmailIndicadoB').val();
    
@@ -207,7 +189,7 @@ function enviarIndicado() {
                 title: 'ERRO!',
                 template: jqxhr.responseText
             }); */
-        /*}).always(function() {
+        }).always(function() {
            // $ionicLoading.hide();
         });
         
@@ -216,6 +198,6 @@ function enviarIndicado() {
     else {
       //  $ionicLoading.hide();
         navigator.notification.alert('Preencha os campos TELEFONE, NOME!', null, 'Campos em branco!', 'OK');
-    }*/
+    }
 
 }

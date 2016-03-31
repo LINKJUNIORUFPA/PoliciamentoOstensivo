@@ -172,11 +172,7 @@
     });
     
         /* button  Voltar */
-    $(document).on("click", ".uib_w_107", function(evt)
-    {
-         /*global activate_page */
-         activate_page("#mainpage"); 
-    });
+    
     
         /* button  Cancelar */
     $(document).on("click", ".uib_w_50", function(evt)
@@ -312,12 +308,7 @@
     });
     
         /* button  Registrar Ocorrência */
-    $(document).on("click", ".uib_w_74", function(evt)
-    {
-        
-        
-        /* your code goes here */ 
-    });
+    
     
         /* button  Registrar Ocorrência */
     $(document).on("click", ".uib_w_74", function(evt)
@@ -343,6 +334,25 @@
     
         /* button  Entrar */
     $(document).on("click", ".uib_w_91", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#mainpage"); 
+    });
+    
+        /* button  Voltar */
+    $(document).on("click", ".uib_w_107", function(evt)
+    {
+        /* your code goes here */ 
+    });
+    
+        /* button  Registrar Ocorrência */
+    $(document).on("click", ".uib_w_74", function(evt)
+    {
+        /* your code goes here */ 
+    });
+    
+        /* button  Voltar */
+    $(document).on("click", ".uib_w_107", function(evt)
     {
          /*global activate_page */
          activate_page("#mainpage"); 
