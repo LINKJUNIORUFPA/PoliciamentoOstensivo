@@ -1,4 +1,4 @@
-function errorDBSalvarForum(tx, err) {
+/*function errorDBSalvarForum(tx, err) {
     navigator.notification.alert('Problema ao salvar forum!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
@@ -188,7 +188,7 @@ function getValueDetalhesForum(){
         $('#idBtnFavoritarForum').removeClass('fa fa-heart iconCorVermelho');
         $('#idBtnFavoritarForum').addClass('fa fa-heart-o');
         
-    }*/
+    }*//*
 }
 
 
@@ -240,4 +240,4 @@ function querySetFavorito(tx, results) {
         listForuns();
         listForunsFavoritos();
     }, 400);
-}
+}*/

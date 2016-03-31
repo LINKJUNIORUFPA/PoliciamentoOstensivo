@@ -1,4 +1,4 @@
-function errorDBSalvarIndicado(tx, err) {
+/*function errorDBSalvarIndicado(tx, err) {
     navigator.notification.alert('Problema ao salvar indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
@@ -147,7 +147,7 @@ function enviarIndicado() {
         template: '<ion-spinner></ion-spinner> Enviando...'
     });
     */
-    var telefone = $('#inputTelefoneIndicadoB').val();
+    /*var telefone = $('#inputTelefoneIndicadoB').val();
     var nome = $('#inputNomeIndicadoB').val();
     var email = $('#inputEmailIndicadoB').val();
    
@@ -188,7 +188,7 @@ function enviarIndicado() {
            /* $ionicPopup.alert({
                 title: 'ERRO!',
                 template: jqxhr.responseText
-            }); */
+            }); *//*
         }).always(function() {
            // $ionicLoading.hide();
         });

@@ -1,4 +1,4 @@
-var dbNome = "politics.db";
+/*var dbNome = "politics.db";
 var dbVersao = "1.0";
 var dbDescricao = "Politics DB";
 var dbSize = 50*1024*1024;
@@ -21,7 +21,7 @@ $(document).ready(function () {
         tx.executeSql('DROP TABLE IF NOT EXISTS forum');
         tx.executeSql('DROP TABLE IF NOT EXISTS rede');
         tx.executeSql('DROP TABLE IF NOT EXISTS mensagem');
-        */
+        *//*
         tx.executeSql('CREATE TABLE IF NOT EXISTS eleitor (ideleitor INTEGER PRIMARY KEY, nome TEXT, cpf TEXT, nascimento TEXT, sexo TEXT, naturalidade TEXT, estadocivil TEXT, nomeempresa TEXT)'); 
         
         tx.executeSql('CREATE TABLE IF NOT EXISTS contato (ideleitor INTEGER PRIMARY KEY, email TEXT, fonefixo TEXT, celular TEXT)'); 
