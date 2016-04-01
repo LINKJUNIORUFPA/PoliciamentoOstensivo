@@ -107,7 +107,7 @@ function salvarOcorrencia(ocorrencia) {
     var anonimato = $('#inputanonimato_oc').val();
     var notif = $('#inputnotif_oc').val();
     
-    if((tipo !== '') && (momento !== '')){
+    if((tipo !== '') && (momento !== '') && (data !== '') && (hora !== '') && (localiz !== '') && (anonimato !== '')){
         
         db.transaction(function(tx) {
             tx.executeSql("INSERT INTO ocorrencia (id, tipo_oc, momento_oc, data_oc, hora_oc, desc_oc, evidencia_oc, localiz_oc, anonimato_oc, notif_oc) VALUES (?,?,?,?,?,?,?,?,?,?)", [localStorage.getItem("id"), tipo_oc, momento_oc, data_oc, hora_oc, desc_oc, evidencia_oc, localiz_oc, anonimato_oc, notif_oc, "Não Enviado"], function(tx, res) {
@@ -126,7 +126,7 @@ function salvarOcorrencia(ocorrencia) {
         }, errorDBSalvarOcorrencia);   
     }
     else {
-        navigator.notification.alert('Preencha os campos TELEFONE, NOME!', null, 'Campos em branco!', 'OK');
+        navigator.notification.alert('Preencha os campos Tipo de Ocorrência, Momento, Data, Hora, Localização da Ocorrência e Anonimato da Denúncia!', null, 'Campos em branco!', 'OK');
     }
 }
 
@@ -167,15 +167,15 @@ function atualizarIndicado() {
         navigator.notification.alert('Preencha os campos TELEFONE, NOME!', null, 'Campos em branco!', 'OK');
     }
 }
+*/
 
-
-function enviarIndicado() {
+function enviarOcorrencia() {
     
- /*   $ionicLoading.show({
+    $ionicLoading.show({
         template: '<ion-spinner></ion-spinner> Enviando...'
     });
-    */
-/*    var telefone = $('#inputTelefoneIndicadoB').val();
+    
+    var telefone = $('#inputTelefoneIndicadoB').val();
     var nome = $('#inputNomeIndicadoB').val();
     var email = $('#inputEmailIndicadoB').val();
    
@@ -213,11 +213,11 @@ function enviarIndicado() {
             var err = textStatus + ", " + error;
             console.log("erro urlConviteNovo: " + err );
             
-           /* $ionicPopup.alert({
+            $ionicPopup.alert({
                 title: 'ERRO!',
                 template: jqxhr.responseText
-            }); */
-        /*}).always(function() {
+            });
+        }).always(function() {
            // $ionicLoading.hide();
         });
         
@@ -226,6 +226,6 @@ function enviarIndicado() {
     else {
       //  $ionicLoading.hide();
         navigator.notification.alert('Preencha os campos TELEFONE, NOME!', null, 'Campos em branco!', 'OK');
-    }*/
+    }
 
 }

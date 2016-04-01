@@ -314,9 +314,9 @@
     
     
         /* button  Enviar */
-    $(document).on("click", ".uib_w_69", function(evt)
-    {
-        /* your code goes here */ 
+    $(document).on("click", ".uib_w_69", function (evt)
+                   {
+        
     });
     
         /* button  Registrar Ocorrência */
@@ -357,6 +357,12 @@
     {
          /*global activate_page */
          activate_page("#RegistrarOcorrencia"); 
+    });
+    
+        /* button  .uib_w_101 */
+    $(document).on("click", ".uib_w_101", function(evt)
+    {
+        /* your code goes here */ 
     });
     
     }
