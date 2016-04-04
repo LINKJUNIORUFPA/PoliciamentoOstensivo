@@ -317,6 +317,8 @@
     $(document).on("click", ".uib_w_69", function (evt)
                    {
         
+      
+       
     });
     
         /* button  Registrar Ocorrência */

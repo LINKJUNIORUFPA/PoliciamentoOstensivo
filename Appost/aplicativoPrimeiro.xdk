@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "3697a4c4-5765-44be-9014-998d6c049123",
-      "lastModifiedDate": 1457727264125,
+      "lastModifiedDate": 1459540421080,
       "creationDate": 1456200791320
     },
     "XDK-app-designer": "true",
@@ -102,7 +102,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "aplicativoPrimeiro",
+        "appName_": "Appost",
         "appID_": "xdk.intel.blank.ad.template.crosswalk",
         "appAccess_": {
           "mode": "legacy",
@@ -133,7 +133,7 @@
           "android-installLocation": "auto"
         },
         "isActive_": true,
-        "appName_": "aplicativoPrimeiro",
+        "appName_": "Appost",
         "appID_": "xdk.intel.blank.ad.template",
         "appAccess_": {
           "mode": "legacy",

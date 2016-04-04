@@ -1,4 +1,4 @@
-function errorDBSalvar(tx, err) {
+/*function errorDBSalvar(tx, err) {
     navigator.notification.alert('Problema ao salvar Dados!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
@@ -26,7 +26,7 @@ var notif_oc = $('#notifoc').val();
     */
     
     
-    $.getJSON(urlTodosForuns, function(data){
+   /* $.getJSON(urlTodosForuns, function(data){
     
         console.log(data);
 		
@@ -208,7 +208,7 @@ function getValueDetalhesForum(){
         
     }*/
 }
-
+/*
 
 function getIconForum(tipo) {
     console.log(" BUSCANDO ICONE" +tipo);
