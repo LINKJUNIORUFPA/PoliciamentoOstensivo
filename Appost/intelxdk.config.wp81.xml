@@ -9,10 +9,10 @@
 <author>Intel XDK</author>
 <content src="index.html"/>
 <access origin="*"/>
-<intelxdk:plugin intelxdk:name="StatusBar" intelxdk:value="cordova-plugin-statusbar" intelxdk:version="1.0.0" intelxdk:checksum="b4e7aac6"/>
-<intelxdk:plugin intelxdk:name="Device" intelxdk:value="cordova-plugin-device" intelxdk:version="1.0.1" intelxdk:checksum="adfc61ba"/>
+<intelxdk:plugin intelxdk:name="StatusBar" intelxdk:value="cordova-plugin-statusbar" intelxdk:version="1.0.0" intelxdk:checksum="b4e7aac6" intelxdk:type="file"/>
+<intelxdk:plugin intelxdk:name="Device" intelxdk:value="cordova-plugin-device" intelxdk:version="1.0.1" intelxdk:checksum="adfc61ba" intelxdk:type="file"/>
 <intelxdk:plugin intelxdk:name="Splashscreen" intelxdk:value="cordova-plugin-splashscreen" intelxdk:version="2.1.0" intelxdk:checksum="62abbc08" intelxdk:type="file"/>
-<intelxdk:plugin intelxdk:name="Cordova sqlite storage plugin" intelxdk:value="cordova-sqlite-storage" intelxdk:version="0.7.11" intelxdk:checksum="6f781594"/>
+<intelxdk:plugin intelxdk:name="Cordova sqlite storage plugin" intelxdk:value="cordova-sqlite-storage" intelxdk:version="0.7.11" intelxdk:checksum="6f781594" intelxdk:type="file"/>
 <preference name="windows-publisher-display-name"/>
 <!--creationInfo:{"src":"appDesigner","projectTypeName":"com.intel.xdk.projecttype.jsapp"}-->
 <preference name="debuggable" value="false"/>

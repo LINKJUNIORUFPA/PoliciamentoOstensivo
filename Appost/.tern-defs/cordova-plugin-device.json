@@ -1,0 +1,13 @@
+{
+    "!name": "cordova-plugin-device",
+    "!define": {
+        "!modules": {
+            "device": {
+                "available": "bool",
+                "manufacturer": "string"
+            }
+        }
+    },
+    "!plugin-version": "1.0.1",
+    "device": "!modules.device"
+}
