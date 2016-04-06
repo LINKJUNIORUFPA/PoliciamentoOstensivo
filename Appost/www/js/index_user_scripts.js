@@ -301,9 +301,7 @@
     $(document).on("click", ".uib_w_91", function(evt)
     {
         
-        localStorage.setItem("nomeU","nomeUsuario");
-        
-        var nome = localStorage.getItem("nomeU");
+    
         /* your code goes here */ 
     });
     
@@ -317,7 +315,7 @@
     $(document).on("click", ".uib_w_69", function (evt)
                    {
         
-      
+      salvarOcorrencia();
        
     });
     

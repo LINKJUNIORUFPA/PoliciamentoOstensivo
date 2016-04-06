@@ -24,30 +24,30 @@ function setValueOcorrencia(id, tipo, momento, data, hota, desc, evidencia, loca
 
 function SalvarOcorrencia() {
     
-    var tipo = $('#inputtipo_oc').val();
-    var momento = $('#inputmomento_oc').val();
-    var data = $('#inputdata_oc').val();
-    var hora = $('#inputhora_oc').val();
-    var desc = $('#inputdesc_oc').val();
-    var evidencia = $('#inputevidencia_oc').val();
-    var localiz = $('#inputlocaliz_oc').val();
-    var anonimato = $('#inputanonimato_oc').val();
-    var notif = $('#inputnotif_oc').val();
+    var tipo = $('#inputtipooc').val();
+    var momento = $('#inputmomentooc').val();
+    var data = $('#inputdataoc').val();
+    var hora = $('#inputhoraoc').val();
+    var desc = $('#inputdescoc').val();
+    var evidencia = $('#inputevidenciaoc').val();
+    var localiz = $('#inputlocalizoc').val();
+    var anonimato = $('#inputanonimatooc').val();
+    var notif = $('#inputnotifoc').val();
     
     if((tipo !== '') && (momento !== '') && (data !== '') && (hora !== '') && (localiz !== '') && (anonimato !== '')){
         
         db.transaction(function(tx) {
-            tx.executeSql("INSERT INTO Ocorrencia (id, tipo_oc, momento_oc, data_oc, hora_oc, desc_oc, evidencia_oc, localiz_oc, anonimato_oc, notif_oc) VALUES (?,?,?,?,?,?,?,?,?,?)", [localStorage.getItem("id"), tipo_oc, momento_oc, data_oc, hora_oc, desc_oc, evidencia_oc, localiz_oc, anonimato_oc, notif_oc, "Nao Enviado"], function(tx, res) {
+            tx.executeSql("INSERT INTO Ocorrencia (id, tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc) VALUES (?,?,?,?,?,?,?,?,?,?)", [localStorage.getItem("id"), tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc, "Nao Enviado"], function(tx, res) {
             
-                $('#inputtipo_oc').val('');
-                $('#inputmomento_oc').val('');
-                $('#inputdata_oc').val('');
-                $('#inputhora_oc').val('');
-                $('#inputdesc_oc').val('');
-                $('#inputevidencia_oc').val('');
-                $('#inputlocaliz_oc').val('');
-                $('#inputanonimato_oc').val('');
-                $('#inputnotif_oc').val('');
+                $('#inputtipooc').val('');
+                $('#inputmomentooc').val('');
+                $('#inputdataoc').val('');
+                $('#inputhoraoc').val('');
+                $('#inputdescoc').val('');
+                $('#inputevidenciaoc').val('');
+                $('#inputlocalizoc').val('');
+                $('#inputanonimatooc').val('');
+                $('#inputnotifoc').val('');
              
             });
         }, errorDBSalvarOcorrencia);   
