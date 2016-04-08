@@ -35,6 +35,7 @@
     <script type="application/javascript" src="js/bancoUsuario.js"></script>
     <script type="application/javascript" src="js/bancoHistorico.js"></script>
     <script type="application/javascript" src="js/bancoConfigConta.js"></script>
+    <script type="application/javascript" src="js/validar.js"></script>
 
   </head>
 
@@ -380,9 +381,11 @@
           <h2>&nbsp; &nbsp; &nbsp; &nbsp; Cadastro</h2>
         </div>
       </div>
-      <div class="table-thing widget uib_w_42 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+       <form name="form" method="post" action="index.html" onsubmit="return checar_cpf();">
+        <div class="table-thing widget uib_w_42 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
         <label class="narrow-control" for="cpfcad"></label>
-        <input class="wide-control form-control default" type="number" placeholder="CPF" id="cpfcad">
+         
+        <input class="wide-control form-control default" type="number" placeholder="CPF" name="cpfcad">
       </div>
       <div class="table-thing widget uib_w_44 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
         <label class="narrow-control" for="nomecad"></label>
@@ -414,6 +417,7 @@
       </div>
       <button class="btn widget uib_w_51 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Enviar</button>
       <button class="btn widget uib_w_50 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Cancelar</button>
+          </form>
     </div>
     <div class="upage vertical-col left hidden" id="EsqueceuSuaSenha">
       <div class="tarea widget uib_w_94 d-margins" data-uib="media/text" data-ver="0" name="uib_w_94">

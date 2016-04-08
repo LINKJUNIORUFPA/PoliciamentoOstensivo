@@ -70,11 +70,7 @@
     });
     
         /* button  Enviar */
-    $(document).on("click", ".uib_w_51", function(evt)
-    {
-         /*global activate_page */
-         activate_page("#mainpage"); 
-    });
+    
     
         /* button  Voltar */
     $(document).on("click", ".uib_w_68", function(evt)
@@ -366,6 +362,13 @@
     {
          /*global activate_page */
          activate_page("#RegistrarOcorrencia"); 
+    });
+    
+        /* button  Enviar */
+    $(document).on("click", ".uib_w_51", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#cadastro"); 
     });
     
     }
