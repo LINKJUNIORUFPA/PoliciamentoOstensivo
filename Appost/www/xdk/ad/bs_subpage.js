@@ -23,7 +23,7 @@ function activate_subpage(sel, have_state)
 }
 
 
-/* this function not used by jQueryMobile or Intel App Framework */
+/* this function not used by jQueryMobile or Intel App Framework*/
 function activate_page(sel, have_state)
 {
     var $dn = $(sel);
@@ -36,6 +36,8 @@ function activate_page(sel, have_state)
         if(!have_state){ window.history.pushState({upage:sel}, sel, document.location.origin + document.location.pathname +sel); }
     }
     $(document).trigger("pagechange");
+
+  
 }
 
 
@@ -43,7 +45,7 @@ function activate_page(sel, have_state)
 
 window.onpopstate = function(event) 
 {
-    //console.log("onpopstate location: " + document.location + ", state: " + JSON.stringify(event.state), ", length:", window.history.length);
+    console.log("onpopstate location: " + document.location + ", state: " + JSON.stringify(event.state), ", length:", window.history.length);
     if(event.state)
     {
         if(event.state.usubpage){ activate_subpage(event.state.usubpage, true); }
@@ -52,4 +54,5 @@ window.onpopstate = function(event)
 };
 
 
-$(document).ready(function(){ setTimeout(function(){ var sel = "#mainsub"; window.history.pushState({usubpage:sel}, sel, document.location.origin + document.location.pathname + "#" + sel); }, 300); });
+// $(document).ready(function(){ setTimeout(function(){ var sel = "#mainsub";window.history.pushState({usubpage:sel}, sel, document.location.origin + document.location.pathname + "#" + sel); }, 300); });
+

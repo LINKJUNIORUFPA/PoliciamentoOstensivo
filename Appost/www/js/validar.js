@@ -6,8 +6,17 @@ function checar_cpf(){
     
     cpf = document.form.cpfcad.value;
     
+    a="abcdefghijklmnopqrstuvxzwy";
+    
+   
+
     if (cpf == ""){
         alert("CPF Obrigátorio !!!");
+        document.form.cpfcad.focus();
+        return (false);
+    }
+    if (cpf == a){
+        alert("Digite números");
         document.form.cpfcad.focus();
         return (false);
     }

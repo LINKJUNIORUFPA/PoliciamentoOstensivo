@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "3697a4c4-5765-44be-9014-998d6c049123",
-      "lastModifiedDate": 1459969695281,
+      "lastModifiedDate": 1460750717325,
       "creationDate": 1456200791320
     },
     "XDK-app-designer": "true",
@@ -126,7 +126,7 @@
         "splashes_": [],
         "addlPermissions_": "",
         "excludedLibraries_": "",
-        "certificateId_": "hP2DK5K8AUKYuCadBuQ03w2",
+        "certificateId_": "TbII5gt_0kqrNSq24lLk6g2",
         "cordovaCLIVersion_": "5.1.1",
         "appVersion_": "0.0.1",
         "appAuthor_": "Intel XDK",

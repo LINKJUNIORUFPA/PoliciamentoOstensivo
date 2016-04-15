@@ -563,7 +563,7 @@ label:empty {
 }
 @media all {
   .header-bg {
-    background-color: #666666;
+    background-color: #ff0000;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -4545,5 +4545,18 @@ label:empty {
 @media all and (min-width: 320px) {
   .row-height-14 > .col > .content-area {
     min-height: 100px;
+  }
+}
+@media all and (min-width: 320px) {
+  .row-height-15 > .col > .content-area {
+    min-height: 100px;
+  }
+}
+@media all {
+  .footer-bg {
+    background-color: #666666;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
 }

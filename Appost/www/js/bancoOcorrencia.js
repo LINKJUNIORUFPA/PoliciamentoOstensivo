@@ -1,7 +1,7 @@
-function errorDBSalvarOcorrencia(tx, err) {
-    navigator.notification.alert('Problema ao salvar Ocorrencia!', null, 'Erro!', 'OK');
-    console.log("Error processing SQL: "+ JSON.stringify(err));
-}
+//function errorDBSalvarOcorrencia(tx, err) {
+ //   navigator.notification.alert('Problema ao salvar Ocorrencia!', null, 'Erro!', 'OK');
+//    console.log("Error processing SQL: "+ JSON.stringify(err));
+//}
 
 
 
@@ -34,10 +34,10 @@ function SalvarOcorrencia() {
     var anonimato = $('#inputanonimatooc').val();
     var notif = $('#inputnotifoc').val();
     
-    if((tipo !== '') && (momento !== '') && (data !== '') && (hora !== '') && (localiz !== '') && (anonimato !== '')){
+    if((tipo !== '') && (momento !== '') && (data !== '') && (hora !== '') && (anonimato !== '')){
         
         db.transaction(function(tx) {
-            tx.executeSql("INSERT INTO Ocorrencia (id, tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc) VALUES (?,?,?,?,?,?,?,?,?,?)", [localStorage.getItem("id"), tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc, "Nao Enviado"], function(tx, res) {
+            tx.executeSql('INSERT INTO Ocorrencia (id, tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc)') VALUES (?,?,?,?,?,?,?,?,?,?)", [localStorage.getItem("id"), tipooc, momentooc, dataoc, horaoc, descoc, evidenciaoc, localizoc, anonimatooc, notifoc, "Nao Enviado"], function(tx) {
             
                 $('#inputtipooc').val('');
                 $('#inputmomentooc').val('');
@@ -50,8 +50,8 @@ function SalvarOcorrencia() {
                 $('#inputnotifoc').val('');
              
             });
-        }, errorDBSalvarOcorrencia);   
-    }
+        }  
+    
     else {
         navigator.notification.alert('Preencha os campos Tipo de Ocorrencia, Momento, Data, Hora, Localizacao da Ocorrencia e Anonimato da Denuncia!', null, 'Campos em branco!', 'OK');
     }

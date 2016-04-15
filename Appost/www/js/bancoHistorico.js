@@ -1,4 +1,4 @@
-/*function errorDBSalvarIndicado(tx, err) {
+function errorDBSalvarIndicado(tx, err) {
     navigator.notification.alert('Problema ao salvar indicado!', null, 'Erro!', 'OK');
     console.log("Error processing SQL: "+ JSON.stringify(err));
 }
@@ -86,7 +86,8 @@ function salvarIndicado(indicado) {
     if((telefone !== '') && (nome !== '')){
         
         db.transactio(function(tx) {
-            tx.executeSql("INSERT INTO indicado (ideleitor, celular, nome, email, status) VALUES (?,?,?,?,?)", [localStorage.getItem("idEleitor"), telefone, nome, email, "Não Enviado"], function(tx, res) {
+            tx.executeSql("INSERT INTO indicado (ideleitor, celular, nome, email, status) VALUES (?,?,?,?,?)", 
+            [localStorage.getItem("idEleitor"), telefone, nome, email, "Não Enviado"], function(tx, res) {
             
                 $('#inputTelefoneIndicado').val('');
                 $('#inputNomeIndicado').val('');
@@ -143,11 +144,11 @@ function atualizarIndicado() {
 
 function enviarIndicado() {
     
- /*   $ionicLoading.show({
+   $ionicLoading.show({
         template: '<ion-spinner></ion-spinner> Enviando...'
     });
-    */
-    /*var telefone = $('#inputTelefoneIndicadoB').val();
+    
+    var telefone = $('#inputTelefoneIndicadoB').val();
     var nome = $('#inputNomeIndicadoB').val();
     var email = $('#inputEmailIndicadoB').val();
    
@@ -185,7 +186,7 @@ function enviarIndicado() {
             var err = textStatus + ", " + error;
             console.log("erro urlConviteNovo: " + err );
             
-           /* $ionicPopup.alert({
+            $ionicPopup.alert({
                 title: 'ERRO!',
                 template: jqxhr.responseText
             }); *//*

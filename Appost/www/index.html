@@ -30,13 +30,11 @@
     <script type="application/javascript" src="https://www.google.com/jsapi"></script>
     <script type="application/javascript" src="chart/chart.js"></script>
 
-    <script type="application/javascript" src="js/banco.js"></script>
-    <script type="application/javascript" src="js/bancoOcorrencia.js"></script>
-    <script type="application/javascript" src="js/bancoUsuario.js"></script>
-    <script type="application/javascript" src="js/bancoHistorico.js"></script>
-    <script type="application/javascript" src="js/bancoConfigConta.js"></script>
+    <script type="application/javascript" src="js/bancoGeral.js"></script>
+
     <script type="application/javascript" src="js/validar.js"></script>
 
+    <script type="application/javascript" src="marginal/marginal-position.min.js"></script>
   </head>
 
   <body class="estilo">
@@ -166,20 +164,15 @@
           <option>Agressão física</option>
         </select>
       </div>
-      <div class="tarea widget uib_w_27 d-margins" data-uib="media/text" data-ver="0" name="uib_w_27">
-        <div class="widget-container left-receptacle"></div>
-        <div class="widget-container right-receptacle"></div>
-        <div class="text-container">
-          <p>A ocorrência aconteceu:</p>
-        </div>
+      <div class="table-thing widget uib_w_148 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/select" data-ver="1">
+        <label class="narrow-control label-inline">Ocorrência aconteceu</label>
+        <select class="wide-control form-control default" id="momentooc">
+          <option>Selecione:</option>
+          <option>Agora</option>
+          <option>Passada</option>
+        </select>
       </div>
 
-      <fieldset class="widget uib_w_30 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="bs-radio-group-2" id="momentooc">
-        <label class="radio radio-padding-left widget uib_w_32" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-2">Agora</label>
-        <label class="radio radio-padding-left widget uib_w_33" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-2">Passada</label>
-      </fieldset>
       <div class="table-thing widget uib_w_52 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
         <label class="narrow-control label-inline" for="dataoc">Data</label>
         <input class="wide-control form-control default" type="date" placeholder="Data" id="dataoc">
@@ -221,41 +214,34 @@
               <div class="rightContent widget-container">
               </div>
             </div>
+            <div class="table-thing widget uib_w_149 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/text_area" data-ver="1">
+              <label class="narrow-control label-top-left">Endereço do Ocorrido:</label>
+              <textarea rows="2" class="wide-control form-control" wrap="soft" placeholder="..." id="enderecoc"></textarea>
+            </div>
+            <div class="table-thing widget uib_w_150 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+              <label class="narrow-control label-inline">Ocorrência Anônima?</label>
+              <select class="wide-control form-control default" id="anonimatooc">
+                <option>Selecione:</option>
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
+            <div class="table-thing widget uib_w_151 d-margins" data-uib="twitter%20bootstrap/select" data-ver="1">
+              <label class="narrow-control label-inline">Receber notificações por email?</label>
+              <select class="wide-control form-control default" id="notifoc">
+                <option>Selecione:</option>
+                <option>Sim</option>
+                <option>Não</option>
+              </select>
+            </div>
 
-            <div class="widget uib_w_87 maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8" id="localizoc"></div>
             <span class="uib_shim"></span>
           </div>
         </div>
         <span class="uib_shim"></span>
       </div>
 
-      <div class="tarea widget uib_w_58 d-margins" data-uib="media/text" data-ver="0" name="uib_w_58">
-        <div class="widget-container left-receptacle"></div>
-        <div class="widget-container right-receptacle"></div>
-        <div class="text-container">
-          <p>Ocorrência anônima?</p>
-        </div>
-      </div>
-      <fieldset class="widget uib_w_59 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="bs-radio-group-3" id="anonimatooc">
-        <label class="radio radio-padding-left widget uib_w_61" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-3">Sim</label>
-        <label class="radio radio-padding-left widget uib_w_62" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-3">Nâo</label>
-      </fieldset>
-      <div class="tarea widget uib_w_63 d-margins" data-uib="media/text" data-ver="0" name="uib_w_63">
-        <div class="widget-container left-receptacle"></div>
-        <div class="widget-container right-receptacle"></div>
-        <div class="text-container">
-          <p>Receber notificações da ocorrência por email?</p>
-        </div>
-      </div>
-      <fieldset class="widget uib_w_64 d-margins" data-uib="twitter%20bootstrap/radio_group" data-ver="1" data-child-name="bs-radio-group-4" id="notifoc">
-        <label class="radio radio-padding-left widget uib_w_66" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-4">Sim</label>
-        <label class="radio radio-padding-left widget uib_w_67" data-uib="twitter%20bootstrap/radio_button" data-ver="1">
-          <input type="radio" name="bs-radio-group-4">Não</label>
-      </fieldset>
-      <button class="btn widget uib_w_69 d-margins TamanhoSair MargemSair btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Enviar Ocorrência</button>
+      <button class="btn widget uib_w_69 d-margins TamanhoSair MargemSair btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1" id="env_oco">Enviar</button>
       <button class="btn widget uib_w_68 d-margins TamanhoSobre MargemSair btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Voltar</button>
     </div>
     <div class="upage vertical-col left hidden" id="telaLogin">
@@ -381,43 +367,43 @@
           <h2>&nbsp; &nbsp; &nbsp; &nbsp; Cadastro</h2>
         </div>
       </div>
-       <form name="form" method="post" action="index.html" onsubmit="return checar_cpf();">
+      <form name="form" method="post" action="index.html" onsubmit="return checar_cpf();">
         <div class="table-thing widget uib_w_42 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control" for="cpfcad"></label>
-         
-        <input class="wide-control form-control default" type="number" placeholder="CPF" name="cpfcad">
-      </div>
-      <div class="table-thing widget uib_w_44 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control" for="nomecad"></label>
-        <input class="wide-control form-control default" type="text" placeholder="Nome" id="nomecad">
-      </div>
-      <div class="table-thing widget uib_w_45 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control" for="telcad"></label>
-        <input class="wide-control form-control default" type="tel" placeholder="Telefone" id="telcad">
-      </div>
-      <div class="table-thing widget uib_w_46 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control" for="emailcad"></label>
-        <input class="wide-control form-control default" type="email" placeholder="Email" id="emailcad">
-      </div>
-      <div class="table-thing widget uib_w_47 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control"></label>
-        <input class="wide-control form-control default" type="email" placeholder="Confirmar Email">
-      </div>
-      <div class="table-thing widget uib_w_49 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control"></label>
-        <input class="wide-control form-control default" type="number" placeholder="Login">
-      </div>
-      <div class="table-thing widget uib_w_48 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control"></label>
-        <input class="wide-control form-control default" type="password" placeholder="Senha">
-      </div>
-      <div class="table-thing widget uib_w_43 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
-        <label class="narrow-control"></label>
-        <input class="wide-control form-control default" type="password" placeholder="Confirmar Senha">
-      </div>
-      <button class="btn widget uib_w_51 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Enviar</button>
-      <button class="btn widget uib_w_50 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Cancelar</button>
-          </form>
+          <label class="narrow-control"></label>
+
+          <input class="wide-control form-control default" type="number" placeholder="CPF" id="cpfcad">
+        </div>
+        <div class="table-thing widget uib_w_44 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Nome" id="nomecad">
+        </div>
+        <div class="table-thing widget uib_w_45 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Telefone" id="telcad">
+        </div>
+        <div class="table-thing widget uib_w_46 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Email" id="emailcad">
+        </div>
+        <div class="table-thing widget uib_w_47 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Confirmar Email">
+        </div>
+        <div class="table-thing widget uib_w_49 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Login" id="logincad">
+        </div>
+        <div class="table-thing widget uib_w_48 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="text" placeholder="Senha" id="senhacad">
+        </div>
+        <div class="table-thing widget uib_w_43 d-margins tamanhocaixatexto" data-uib="twitter%20bootstrap/input" data-ver="1">
+          <label class="narrow-control"></label>
+          <input class="wide-control form-control default" type="password" placeholder="Confirmar Senha">
+        </div>
+        <button class="btn widget uib_w_51 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Enviar</button>
+        <button class="btn widget uib_w_50 TamanhoSobre d-margins btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Cancelar</button>
+      </form>
     </div>
     <div class="upage vertical-col left hidden" id="EsqueceuSuaSenha">
       <div class="tarea widget uib_w_94 d-margins" data-uib="media/text" data-ver="0" name="uib_w_94">
@@ -649,6 +635,52 @@
         <span class="uib_shim"></span>
       </div>
       <button class="btn widget uib_w_119 d-margins TamanhoSair MargemSair btn-danger" data-uib="twitter%20bootstrap/button" data-ver="1">Voltar</button>
+    </div>
+    <div class="upage hidden" id="page">
+
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_145" data-uib="layout/header" data-ver="0">
+          <h2></h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_75_67">
+          <div class="tarea widget uib_w_147 d-margins" data-uib="media/text" data-ver="0" name="uib_w_147">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p><strong>Ocorrência Enviada!</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="uib-footer uib-footer-fixed footer-bg container-group inner-element uib_w_146" data-uib="layout/footer" data-ver="0">
+          <h2></h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+      </div>
+    </div>
+    <div class="upage hidden" id="feito">
+      <div class="upage-outer">
+        <div class="uib-header header-bg container-group inner-element uib_w_152" data-uib="layout/header" data-ver="0">
+          <h2></h2>
+          <div class="widget-container wrapping-col single-centered"></div>
+          <div class="widget-container content-area horiz-area wrapping-col left"></div>
+          <div class="widget-container content-area horiz-area wrapping-col right"></div>
+        </div>
+        <div class="upage-content ac0 content-area vertical-col left" id="page_60_99">
+          <div class="tarea widget uib_w_153 d-margins" data-uib="media/text" data-ver="0" name="uib_w_153">
+            <div class="widget-container left-receptacle"></div>
+            <div class="widget-container right-receptacle"></div>
+            <div class="text-container">
+              <p>Cadastro Realizado!</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </body>

@@ -59,7 +59,7 @@
     $(document).on("click", ".uib_w_2", function(evt)
     {
          /*global activate_page */
-         activate_page("#RegistrarOcorencia"); 
+         activate_page("#RegistrarOcorrencia"); 
     });
     
         /* button  Voltar */
@@ -156,6 +156,9 @@
         /* button  Cadastre-se */
     $(document).on("click", ".uib_w_92", function(evt)
     {
+		
+		
+		
          /*global activate_page */
          activate_page("#cadastro"); 
     });
@@ -307,13 +310,8 @@
         /* button  Registrar Ocorrência */
     
     
-        /* button  Enviar */
-    $(document).on("click", ".uib_w_69", function (evt)
-                   {
-        
-      salvarOcorrencia();
-       
-    });
+        /* button  Enviar ocorrência */
+    
     
         /* button  Registrar Ocorrência */
     
@@ -365,10 +363,34 @@
     });
     
         /* button  Enviar */
+    
+           /* button  Enviar Ocorrência */
+    $(document).on("click", ".uib_w_69", function(evt)
+    {
+        
+      salvarOcorrencia();
+
+        
+        //chamar funcao aqui
+         /*global activate_page */
+         activate_page("#page"); 
+    });
+    
+        /* button  Enviar Ocorrência */
+    $(document).on("click", ".uib_w_69", function(evt)
+    {
+        /* your code goes here */ 
+    });
+    
+        /* button  Enviar */
+    
+    
+        /* button  Enviar */
     $(document).on("click", ".uib_w_51", function(evt)
     {
-         /*global activate_page */
-         activate_page("#cadastro"); 
+        /* your code goes here */ 
+        salvarUsuario();
+        activate_page("#feito"); 
     });
     
     }
